@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-
+    
     $("#b-map").click(function () { 
         var titre = $('#Cm-title').val()
         var latitude = $('#Cm-latitude').val()
@@ -42,7 +42,8 @@ jQuery(document).ready(function($){
     });
 
     $("#supr-map").click(function(){
-        if (confirm("Souhaitez-vous vraiment supprimer cette carte ?")) {
+        
+        if (confirm(textJs.confirmation)) {
         $('#formMapDelete').submit();
 
         }

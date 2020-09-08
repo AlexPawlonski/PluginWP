@@ -1,6 +1,6 @@
 <div id="menuMap">
     <ul>
-        <li id="active">Créer une carte</li>
+        <li id="active"><?php _e('Create a map', 'cefii-map');?></li>
         <?php
         $maplist = $this->getmaplist();
         foreach($maplist as $map){
@@ -10,45 +10,45 @@
     </ul>
 </div>
 <div id="apiKey">
-    <p><strong>Important. Une clé API est nécessaire pour afficher les carte Google</strong></p>
-    <a href="https://console.developers.google.com/" target="_blanck ">Obtenir une clé API grapheme_extratuitement</a>
-    <p>Après création de la clé API, collez-la ci-dessous.</p>
+    <p><strong><?php _e('Important. An API key is required to display Google maps', 'cefii-map');?></strong></p>
+    <a href="https://console.developers.google.com/" target="_blanck "><?php _e('Get an API key for free', 'cefii-map');?></a>
+    <p><?php _e('After creating the API key, paste it below.', 'cefii-map');?></p>
 </div>
 <form action="options.php" method="POST">
     <?php 
     settings_fields( "cefiiMap-section" );
     do_settings_sections("Cefii_Map");
-    submit_button("Enregister la clé")
+    submit_button(__('Register the key', 'cefii-map'));
     ?>
 </form>
-<h3 class="title">Créer une carte :</h3>
+<h3 class="title"><?php _e('Create a map', 'cefii-map');?></h3>
 <div class="warpCefiiMap">
     
     <form action="?page=Cefii_Map&action=createmap" id="formMap" method="post">
         <p>
-            <label for="Cm-title">Titre* :</label><br>
+            <label for="Cm-title"><?php _e('Title*:', 'cefii-map');?></label><br>
             <input type="text" id="Cm-title" name="Cm-title">
             <p class="errorCefiiMap" id="Cm-title-error">
-                Veuillez renseigner un titre.
+                <?php _e('Please enter a title.', 'cefii-map');?>
             </p>
         </p>
         <p>
             <label for="Cm-latitude">Latitude* :</label><br>
             <input type="text" id="Cm-latitude" name="Cm-latitude">
             <p class="errorCefiiMap" id="Cm-latitude-error">
-                Veuillez renseigner une latitude.
+                <?php _e('Please enter a latitude.', 'cefii-map');?>
             </p>
         </p>
         <p>
-            <label for="Cm-longitude">Latitude* :</label><br>
+            <label for="Cm-longitude">Longitude* :</label><br>
             <input type="text" id="Cm-longitude" name="Cm-longitude">
             <p class="errorCefiiMap" id="Cm-longitude-error">
-                Veuillez renseigner une longitude.
+                <?php _e('Please enter a longitude.', 'cefii-map');?>
             </p>
         </p>
-        <i><small>* champs obligatoires</small></i>
+        <i><small>* <?php _e('Required fields.', 'cefii-map');?></small></i>
         <p>
-            <input type="button" id="b-map" value="Enregistrer" class="button-primary">
+            <input type="button" id="b-map" value="Register" class="button-primary">
         </p>
     </form>
 </div>

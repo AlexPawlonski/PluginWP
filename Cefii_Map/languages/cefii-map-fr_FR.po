@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cefii_Map\n"
+"POT-Creation-Date: 2020-09-08 16:42+0200\n"
+"PO-Revision-Date: 2020-09-08 16:52+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Cefii_Map.php:12
+msgid "Insert Google map via a shortcode"
+msgstr "Insérer la carte Google via un code court"
+
+#: Cefii_Map.php:39
+msgid "The card has been registered"
+msgstr "La carte a été enregistrée"
+
+#: Cefii_Map.php:42
+msgid "The card has been deleted."
+msgstr "La carte a été supprimée."
+
+#: Cefii_Map.php:59 Cefii_Map.php:75 Cefii_Map.php:91
+msgid "An error has occurred."
+msgstr "Une erreur s'est produite."
+
+#: Cefii_Map.php:62 Cefii_Map.php:78
+msgid "Please complete all fields !"
+msgstr "S’il vous plaît compléter tous les champs !"
+
+#: Cefii_Map.php:103
+msgid "Do you want ti delete this map?"
+msgstr "Voulez-vous supprimer cette carte?"
+
+#: Cefii_Map.php:159
+msgid "Your API Key"
+msgstr "Votre clé API"
+
+#: template-admin.php:3 template-admin.php:24 template-map.php:3
+msgid "Create a map"
+msgstr "Créer une carte"
+
+#: template-admin.php:13
+msgid "Important. An API key is required to display Google maps"
+msgstr "Important. Une clé API est nécessaire pour afficher google maps"
+
+#: template-admin.php:14
+msgid "Get an API key for free"
+msgstr "Obtenir gratuitement une clé API"
+
+#: template-admin.php:15
+msgid "After creating the API key, paste it below."
+msgstr "Aprés avoir créé votre clé, collé la ici ."
+
+#: template-admin.php:21
+msgid "Register the key"
+msgstr "Enregister la clé"
+
+#: template-admin.php:29
+msgid "Title*:"
+msgstr "Titre*:"
+
+#: template-admin.php:32 template-map.php:35
+msgid "Please enter a title."
+msgstr "Merci d'indiquer un titre."
+
+#: template-admin.php:39 template-map.php:42
+msgid "Please enter a latitude."
+msgstr "Merci  d'indiquer une latitude."
+
+#: template-admin.php:46 template-map.php:49
+msgid "Please enter a longitude."
+msgstr "Merci d'indiquer une longitude ."
+
+#: template-admin.php:49 template-map.php:52
+msgid "Required fields."
+msgstr "Champ requi ."
+
+#: template-map.php:23
+msgid ""
+"Copy (ctrl + c) the code and paste (ctrl + v) in the page or atricle where "
+"you want the map to appear your map:"
+msgstr ""
+"Copiez (Ctrl +c) le code et collez  (Ctrl+v) le dans votre page ou votre "
+"article, la ou vous voulez que votre Google map s'affiche :"
+
+#: template-map.php:24
+msgid "Copied !"
+msgstr "Copier !"
+
+#: template-map.php:28
+msgid "Map :"
+msgstr "Map :"
+
+#: template-map.php:54
+msgid "Update"
+msgstr "Modifier"
+
+#: template-map.php:60
+msgid "Delete Map"
+msgstr "Supprimer la carte"
+
+#: template-map.php:65
+msgid "Preview:"
+msgstr "Prévisualisation :"

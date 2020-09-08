@@ -2,11 +2,14 @@
 /*
 Plugin Name: CEFII MAP
 Plugin URI: https://www.cefii.fr
-Description: Plugin d'ajout de MAP avec l'API Google!
+Description: Insert Google map via a shortcode
 Author: Moi 
 Version: 0.1
 Licence: GPL2
+Text Domain : cefii-map
+Domain Path: /languages/
 */
+__('Insert Google map via a shortcode', 'cefii-map');
 if(!class_exists('Cefii_Map')){
     class Cefii_Map {
         function cefii_map_install(){
@@ -33,10 +36,10 @@ if(!class_exists('Cefii_Map')){
             }
             if(isset($_GET['map'])){
                 if($_GET['map'] == 'ok'){
-                    echo '<p class ="sucess">La carte a bien été enregistrée</p>';
+                    echo '<p class ="sucess">'.__('The card has been registered', 'cefii-map').'</p>';
                 }
                 if($_GET['map'] == 'deleteok'){
-                    echo '<p class="sucess"> La carte a bien été supprimée.</p>';
+                    echo '<p class="sucess">'.__('The card has been deleted.', 'cefii-map').'</p>';
                 }
             }
 
@@ -53,10 +56,10 @@ if(!class_exists('Cefii_Map')){
                            </script>
                            <?php 
                         }else{
-                            echo '<p class="erreur">Une erreur est survenue.</p>';
+                            echo '<p class="erreur">'.__('An error has occurred.', 'cefii-map').'</p>';
                         }
                     }else{
-                        echo '<p class="erreur">Veillez remplir tous les champs !</p>';
+                        echo '<p class="erreur">'.__('Please complete all fields !', 'cefii-map').'</p>';
                     }
                 }elseif($_GET['action'] == 'updatemap'){
                     if((trim($_POST['Cm-title'])!='') && (trim($_POST['Cm-latitude'])!='') && (trim($_POST['Cm-longitude'])!='') && (trim($_POST['Cm-id'])!='')) {
@@ -69,10 +72,10 @@ if(!class_exists('Cefii_Map')){
                            </script>
                            <?php 
                         }else{
-                            echo '<p class="erreur">Une erreur est survenue.</p>';
+                            echo '<p class="erreur">'.__('An error has occurred.', 'cefii-map').'</p>';
                         }
                     }else{
-                        echo '<p class="erreur">Veillez remplir tous les champs !</p>';
+                        echo '<p class="erreur">'.__('Please complete all fields !', 'cefii-map').'</p>';
                     }
                 }elseif($_GET['action'] == 'deletemap'){
                     if((trim($_POST['Cm-id'])!='')) {
@@ -85,7 +88,7 @@ if(!class_exists('Cefii_Map')){
                            </script>
                            <?php 
                         }else{
-                            echo '<p class="erreur">Une erreur est survenue.</p>';
+                            echo '<p class="erreur">'.__('An error has occurred.', 'cefii-map').'</p>';
                         }
                     }
                 }
@@ -96,8 +99,12 @@ if(!class_exists('Cefii_Map')){
             wp_enqueue_style('cefii_map_css');
             wp_enqueue_script('cefii_map_js',
                 plugins_url('js/admin-cefii-map.js', __FILE__),array('jquery'));
+            wp_localize_script('cefii_map_js', 'textJs', array(
+                'confirmation' => __('Do you want ti delete this map?', 'cefii-map')
+            ));
             wp_enqueue_script('google_map_js','https://maps.googleapis.com/maps/api/js?key='.get_option('cleApi'));
         }
+
         function insertmap($title, $lat, $long){
             global $wpdb;
             $table_map = $wpdb->prefix.'cefiimap';
@@ -149,7 +156,7 @@ if(!class_exists('Cefii_Map')){
         }
         function cefiiMap_options(){
             add_settings_section("cefiiMap-section", '', null, "Cefii_Map");
-            add_settings_field( "cleApi", "Votre clé API", 
+            add_settings_field( "cleApi", __('Your API Key', 'cefii-map'), 
                 array($this,'champ_cleApi'), "Cefii_Map", "cefiiMap-section");
             register_setting("cefiiMap-section", "cleApi");
         }
@@ -173,6 +180,10 @@ if(!class_exists('Cefii_Map')){
             </script>
             <?php return ob_get_clean();
         }
+        function cefii_map_load_textdomain(){
+            load_plugin_textdomain('cefii-map', false,
+            dirname(plugin_basename(__FILE__) ) .'/languages/');
+        }
     }
     
 }
@@ -180,6 +191,7 @@ if(class_exists('Cefii_Map')){
     $inst_map = new Cefii_Map();
 }
 if(isset($inst_map)){
+    add_action('plugin_cefiiMap', array($inst_map, 'cefii_map_load_textdomain'));
     register_activation_hook(__FILE__, array($inst_map, 'cefii_map_install'));
     add_action('admin_menu', array($inst_map, 'init'));
     add_action('admin_init', array($inst_map, 'cefiiMap_options'));
