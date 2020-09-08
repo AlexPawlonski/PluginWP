@@ -1,3 +1,14 @@
+<div id="menuMap">
+    <ul>
+        <li id="active">Créer une carte</li>
+        <?php
+        $maplist = $this->getmaplist();
+        foreach($maplist as $map){
+            echo "<li><a href='?page=Cefii_Map&p=map&id=".$map->id."'>".$map->titre."</a></li>";
+        }
+        ?>
+    </ul>
+</div>
 <div id="apiKey">
     <p><strong>Important. Une clé API est nécessaire pour afficher les carte Google</strong></p>
     <a href="https://console.developers.google.com/" target="_blanck ">Obtenir une clé API grapheme_extratuitement</a>
@@ -10,18 +21,6 @@
     submit_button("Enregister la clé")
     ?>
 </form>
-
-<div id="menuMap">
-    <ul>
-        <li id="active">Créer une carte</li>
-        <?php
-        $maplist = $this->getmaplist();
-        foreach($maplist as $map){
-            echo "<li><a href='?page=Cefii_Map&p=map&id=".$map->id."'>".$map->titre."</a></li>";
-        }
-        ?>
-    </ul>
-</div>
 <h3 class="title">Créer une carte :</h3>
 <div class="warpCefiiMap">
     
