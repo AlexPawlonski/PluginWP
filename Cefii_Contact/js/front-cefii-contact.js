@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
     $('#Cefii_Contact_submit').click(function(){
-        let name = $('#Cefii_Contact_name').val().trim();
-        let phone = $('#Cefii_Contact_phone').val().trim();
+        var name = $('#Cefii_Contact_name').val().trim();
+        var phone = $('#Cefii_Contact_phone').val().trim();
 
         if(name == "" || phone == ""){
             $('#result').html('<span style="color:red;">Une erreur est survenue, veuillez réessayer.</span>');
@@ -27,8 +27,8 @@ jQuery(document).ready(function ($) {
             },
             success: function(data){
                 $('#result').html(data);
-                name.val("");
-                phone.val("");
+                $('#Cefii_Contact_name').val("");
+                $('#Cefii_Contact_phone').val("");
             }
             
         });
