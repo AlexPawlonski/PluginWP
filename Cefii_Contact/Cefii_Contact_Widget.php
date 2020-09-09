@@ -4,7 +4,7 @@ class Cefii_Contact_Widget extends WP_Widget{
     {
         $widget_options = array(
             'classname' => 'widget_cefii_Contact',
-            'description' => __('Widget allow a call panell', 'cefii-map')
+            'description' => __('Widget allow a call panell', 'cefii-contact')
             
         );
         parent::__construct('widget-cefii_Contact', 'CEFII Contact', $widget_options);
@@ -18,7 +18,7 @@ class Cefii_Contact_Widget extends WP_Widget{
         $instance = wp_parse_args($instance, $defaults);
         ?>
         <p>
-            <label for="title"><?php _e('Widget title :', 'cefii-map')?></label>
+            <label for="title"><?php _e('Widget title :', 'cefii-contact')?></label>
             <input 
             type="text"
             class="widefat"
@@ -40,29 +40,18 @@ class Cefii_Contact_Widget extends WP_Widget{
         extract($args);
         echo $before_widget;
         echo $before_title .$instance['title']. $after_title;?>
-        <label 
-        for="<?php echo $this->get_field_id('name');?>"
-        name="<?php echo $this->get_field_name('name');?>">
-        <?php _e('Your name:', 'cefii-contact')?>
-        </label>
-        <input 
-        type="text"
-        for="<?php echo $this->get_field_id('name');?>"
-        name="<?php echo $this->get_field_name('name');?>"
-        value="">
-        
-        <label 
-        for="<?php echo $this->get_field_id('phone');?>"
-        name="<?php echo $this->get_field_name('phone');?>">
-        <?php _e('Your Phone:', 'cefii-contact')?>
-        </label>
-        <input 
-        type="text"
-        for="<?php echo $this->get_field_id('phone');?>"
-        name="<?php echo $this->get_field_name('phone');?>"
-        value="">
-        <button type="button" id="<?php echo $this->get_field_id('submit');?>"><?php _e('CALL ME', 'cefii-contact')?></button>
-        <div id="<?php echo $this->get_field_name('info');?>"></div>
+        <form id="form_contact" action="">
+            <label for="Cefii_Contact_name" name="Cefii_Contact_name">
+                <?php _e('Your name:', 'cefii-contact')?>
+            </label>
+            <input type="text" id="Cefii_Contact_name" name="Cefii_Contact_name" value="">
+            
+            <label for="Cefii_Contact_phone" name="Cefii_Contact_phone"> <?php _e('Your Phone:', 'cefii-contact')?>
+            </label>
+            <input type="text" id="Cefii_Contact_phone" name="Cefii_Contact_phone" value="">
+            <button type="button" id="Cefii_Contact_submit"><?php _e('CALL ME', 'cefii-contact')?></button>
+            <div id="result"></div>
+        </form>
         <?php 
         echo $after_widget;
     }

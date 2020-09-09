@@ -1,0 +1,130 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cefii_Map\n"
+"POT-Creation-Date: 2020-09-09 14:24+0200\n"
+"PO-Revision-Date: 2020-09-09 14:29+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Cefii_Contact.php:12
+msgid "Insert an option to be called"
+msgstr "Ajout un widget \"rappeler nous !\""
+
+#: Cefii_Contact_Widget.php:7
+msgid "Widget allow a call panell"
+msgstr "Widget qui permettre l’affichage d’un panel"
+
+#: Cefii_Contact_Widget.php:15
+msgid "We contact you !"
+msgstr "On vous rappelle !"
+
+#: Cefii_Contact_Widget.php:21
+msgid "Widget title :"
+msgstr "Titre du widget :"
+
+#: Cefii_Contact_Widget.php:46
+msgid "Your name:"
+msgstr "Votre nom:"
+
+#: Cefii_Contact_Widget.php:57
+#| msgid "Your API Key"
+msgid "Your Phone:"
+msgstr "Votre Téléphone:"
+
+#: Cefii_Contact_Widget.php:64
+msgid "CALL ME"
+msgstr "ME RAPPELER"
+
+#~ msgid "Insert Google map via a shortcode"
+#~ msgstr "Insérer la carte Google via un code court"
+
+#~ msgid "The card has been registered"
+#~ msgstr "La carte a été enregistrée"
+
+#~ msgid "The card has been deleted."
+#~ msgstr "La carte a été supprimée."
+
+#~ msgid "An error has occurred."
+#~ msgstr "Une erreur s'est produite."
+
+#~ msgid "Please complete all fields !"
+#~ msgstr "S’il vous plaît compléter tous les champs !"
+
+#~ msgid "Do you want ti delete this map?"
+#~ msgstr "Voulez-vous supprimer cette carte?"
+
+#~ msgid "New Map"
+#~ msgstr "Nouvelle carte"
+
+#~ msgid "Select a Map :"
+#~ msgstr "Supprimer la carte"
+
+#~ msgid "Or create a new Map"
+#~ msgstr "Créer une carte"
+
+#~ msgid "Here"
+#~ msgstr "Ici"
+
+#~ msgid "Map Zoom 8 -> 17 :"
+#~ msgstr "Zoom carte 8 -> 17 :"
+
+#~ msgid "Would you like to display the title of the map ?"
+#~ msgstr "Souhaitez-vous afficher le titre de la carte ?"
+
+#~ msgid "Create a map"
+#~ msgstr "Créer une carte"
+
+#~ msgid "Important. An API key is required to display Google maps"
+#~ msgstr "Important. Une clé API est nécessaire pour afficher google maps"
+
+#~ msgid "Get an API key for free"
+#~ msgstr "Obtenir gratuitement une clé API"
+
+#~ msgid "After creating the API key, paste it below."
+#~ msgstr "Aprés avoir créé votre clé, collé la ici ."
+
+#~ msgid "Register the key"
+#~ msgstr "Enregister la clé"
+
+#~ msgid "Title*:"
+#~ msgstr "Titre*:"
+
+#~ msgid "Please enter a title."
+#~ msgstr "Merci d'indiquer un titre."
+
+#~ msgid "Please enter a latitude."
+#~ msgstr "Merci  d'indiquer une latitude."
+
+#~ msgid "Please enter a longitude."
+#~ msgstr "Merci d'indiquer une longitude ."
+
+#~ msgid "Required fields."
+#~ msgstr "Champ requi ."
+
+#~ msgid "Copy (ctrl + c) the code and paste (ctrl + v) in the page or atricle where you want the map to appear your map:"
+#~ msgstr "Copiez (Ctrl +c) le code et collez  (Ctrl+v) le dans votre page ou votre article, la ou vous voulez que votre Google map s'affiche :"
+
+#~ msgid "Copied !"
+#~ msgstr "Copier !"
+
+#~ msgid "Map :"
+#~ msgstr "Map :"
+
+#~ msgid "Update"
+#~ msgstr "Modifier"
+
+#~ msgid "Delete Map"
+#~ msgstr "Supprimer la carte"
+
+#~ msgid "Preview:"
+#~ msgstr "Prévisualisation :"
