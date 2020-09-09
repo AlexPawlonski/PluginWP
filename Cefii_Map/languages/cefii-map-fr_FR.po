@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cefii_Map\n"
-"POT-Creation-Date: 2020-09-08 16:42+0200\n"
-"PO-Revision-Date: 2020-09-09 09:11+0200\n"
+"POT-Creation-Date: 2020-09-09 13:36+0200\n"
+"PO-Revision-Date: 2020-09-09 13:37+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -20,29 +20,61 @@ msgstr ""
 msgid "Insert Google map via a shortcode"
 msgstr "Insérer la carte Google via un code court"
 
-#: Cefii_Map.php:39
+#: Cefii_Map_Plugin.php:27
 msgid "The card has been registered"
 msgstr "La carte a été enregistrée"
 
-#: Cefii_Map.php:42
+#: Cefii_Map_Plugin.php:30
 msgid "The card has been deleted."
 msgstr "La carte a été supprimée."
 
-#: Cefii_Map.php:59 Cefii_Map.php:75 Cefii_Map.php:91
+#: Cefii_Map_Plugin.php:47 Cefii_Map_Plugin.php:63 Cefii_Map_Plugin.php:79
 msgid "An error has occurred."
 msgstr "Une erreur s'est produite."
 
-#: Cefii_Map.php:62 Cefii_Map.php:78
+#: Cefii_Map_Plugin.php:50 Cefii_Map_Plugin.php:66
 msgid "Please complete all fields !"
 msgstr "S’il vous plaît compléter tous les champs !"
 
-#: Cefii_Map.php:103
+#: Cefii_Map_Plugin.php:91
 msgid "Do you want ti delete this map?"
 msgstr "Voulez-vous supprimer cette carte?"
 
-#: Cefii_Map.php:159
+#: Cefii_Map_Plugin.php:147
 msgid "Your API Key"
 msgstr "Votre clé API"
+
+#: Cefii_Map_Widget.php:8
+msgid "Widget allow the display of a map"
+msgstr "Widget permettre l’affichage d’une carte"
+
+#: Cefii_Map_Widget.php:16
+msgid "New Map"
+msgstr "Nouvelle carte"
+
+#: Cefii_Map_Widget.php:24
+msgid "Widget title :"
+msgstr "Titre du widget :"
+
+#: Cefii_Map_Widget.php:33
+msgid "Select a Map :"
+msgstr "Supprimer la carte"
+
+#: Cefii_Map_Widget.php:51
+msgid "Or create a new Map"
+msgstr "Créer une carte"
+
+#: Cefii_Map_Widget.php:51
+msgid "Here"
+msgstr "Ici"
+
+#: Cefii_Map_Widget.php:53
+msgid "Map Zoom 8 -> 17 :"
+msgstr "Zoom carte 8 -> 17 :"
+
+#: Cefii_Map_Widget.php:72
+msgid "Would you like to display the title of the map ?"
+msgstr "Souhaitez-vous afficher le titre de la carte ?"
 
 #: template-admin.php:3 template-admin.php:24 template-map.php:3
 msgid "Create a map"

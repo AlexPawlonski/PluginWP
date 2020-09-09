@@ -13,6 +13,7 @@ __('Insert Google map via a shortcode', 'cefii-map');
 class Cefii_Map{
     function __construct(){
         include_once plugin_dir_path(__FILE__).'/Cefii_Map_Plugin.php';
+        include_once plugin_dir_path(__FILE__).'/Cefii_Map_Widget.php';
         if(class_exists('Cefii_Map')){
             $inst_map = new Cefii_Map_Plugin();
         }
@@ -27,6 +28,9 @@ class Cefii_Map{
             if(function_exists('add_shortcode')){
                 add_shortcode('cefiimap', array($inst_map,'cefii_map_shortcode'));
             }
+            add_action('widgets_init', function(){
+                register_widget('Cefii_Map_Widget');
+            });
         }
     }
 }

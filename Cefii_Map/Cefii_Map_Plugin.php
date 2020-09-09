@@ -104,7 +104,7 @@
             return $req;
         }
 
-        function getmaplist(){
+        public static function getmaplist(){
             global $wpdb;
             $table_map = $wpdb->prefix.'cefiimap';
             $sql ="SELECT * FROM ".$table_map;
@@ -123,7 +123,7 @@
             return $result;
         }
 
-        function getmap($id){
+        public static function getmap($id){
             global $wpdb;
             $table_map = $wpdb->prefix.'cefiimap';
             $sql= $wpdb->prepare("SELECT * FROM ". $table_map." WHERE id=%d LIMIT 1",$id);
