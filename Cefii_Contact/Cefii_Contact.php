@@ -31,6 +31,9 @@ class Cefii_Contact{
                 add_action("wp_ajax_suppr_cefii_contact", array($inst_contact, 'cefii_contact_admin_ajax'));
                 }
             add_action('admin_menu', array($inst_contact, 'cefii_contact_menu'));
+            add_action('admin_bar_menu', array($inst_contact, 'ajout_icone_toolbar'), 100);
+            add_action('admin_enqueue_scripts', array($inst_contact, 'cefii_contact_add_style_admin'), 100);
+            add_action('wp_enqueue_scripts', array($inst_contact, 'cefii_contact_add_style_admin'), 100);
             
         }
     }

@@ -20,6 +20,10 @@ jQuery(document).ready(function ($) {
                 $("#contact-" + id).fadeOut(300, function(){
                     $(this).remove();
                 })
+                var nbrIcon = $("#wp-admin-bar-cefii-contact .ab-label");
+                var nbr = parseInt(nbrIcon.text());
+                nbr--;
+                nbrIcon.text(nbr);
             },
             error: function(err){
                 $('#result').html("error serveur ");

@@ -90,5 +90,29 @@ class Cefii_Contact_Plugin {
         $contactdelet= $wpdb->query($sql);
         return $contactdelet;
     }
+
+    function ajout_icone_toolbar($wp_admin_bar){
+        $args = array(
+            'id' => 'cefii-contact',
+            'title' => '<span class ="ab-icon"></span><span class="ab-label">'.$this->countphone().'</span>',
+            'href' => admin_url('admin.php?page=Cefii_Contact.php'),
+            'meta' => array(
+                'title' => __('call contact','cefii_contact')
+            )
+        );
+        $wp_admin_bar->add_node($args);
+    }
+    function countphone(){
+        global $wpdb;
+        $list = $this->get_contact_list();
+        $count = $wpdb->num_rows;
+        return $count;
+    }
+
+
+    function cefii_contact_add_style_admin(){
+        wp_register_style('cefii_bar_css', plugins_url('css/admin-bar.css', __FILE__));
+        wp_enqueue_style('cefii_bar_css');
+    }
     
 }
