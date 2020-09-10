@@ -29,10 +29,15 @@ jQuery(document).ready(function ($) {
                 $('#result').html(data);
                 $('#Cefii_Contact_name').val("");
                 $('#Cefii_Contact_phone').val("");
+            },
+            error: function(err){
+                $('#result').html("error serveur ");
+                console.log(err);
             }
             
         });
     }
+    
 
     function testphone($input){
         var expReg = /^(0|\+33)[1-9]([-. ]?[0-9]{2}){4}$/; 

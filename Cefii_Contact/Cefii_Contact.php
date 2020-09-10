@@ -26,11 +26,12 @@ class Cefii_Contact{
             add_action('wp_head', array($inst_contact, 'cefii_contact_front'));
 
             if(isset($_POST['action'])){
-                add_action('wp_ajax_nopriv_cefii_contact', 
-                    array($inst_contact, 'cefii_contact_front_ajax'));
-                add_action('wp_ajax_cefii_contact', 
-                    array($inst_contact, 'cefii_contact_front_ajax'));
-            }
+                add_action('wp_ajax_nopriv_cefii_contact', array($inst_contact, 'cefii_contact_front_ajax'));
+                add_action('wp_ajax_cefii_contact', array($inst_contact, 'cefii_contact_front_ajax'));
+                add_action("wp_ajax_suppr_cefii_contact", array($inst_contact, 'cefii_contact_admin_ajax'));
+                }
+            add_action('admin_menu', array($inst_contact, 'cefii_contact_menu'));
+            
         }
     }
 }

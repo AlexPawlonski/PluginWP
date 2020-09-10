@@ -1,0 +1,24 @@
+table{
+    border-collapse: collapse; 
+    text-align: center;
+}
+table td {
+	width: 200px;
+}
+table th {
+	width: 200px;
+}
+table thead th {
+	background-color: #949494;
+	border: 1px solid #54585d;
+}
+table tbody td {
+	color: #636363;
+	border: 1px solid #202020;
+}
+table tbody tr {
+	background-color: #949494;
+}
+table tbody tr:nth-child(odd) {
+	background-color: #ffffff;
+}
